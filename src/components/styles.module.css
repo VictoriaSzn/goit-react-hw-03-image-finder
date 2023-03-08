@@ -178,7 +178,7 @@ img {
 }
 
 /*
-* Стили компонента Buton (Load more)
+* Стили компонента Button (Load more)
 */
 .Button {
   padding: 8px 16px;
@@ -205,17 +205,21 @@ img {
 .Button:focus {
   background-color: #303f9f;
 }
-.icon-spin {
-  margin-right: 10px;
-  animation: icon-spin 2s infinite linear;
+/*
+* Стили компонента Loader
+*/
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-
-@keyframes icon-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(359deg);
-  }
+.loader_title{
+    text-align: center;
+    
+    
 }

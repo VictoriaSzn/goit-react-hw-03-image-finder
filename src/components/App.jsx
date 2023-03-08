@@ -8,11 +8,12 @@ import styles from './styles.module.css';
 
 export default class App extends Component {
   state = {
-     textSearch:''
+    textSearch: '',
   }
   handleFormSubmit = textSearch => {
     this.setState({ textSearch });
   }
+ 
   render() {
     return (
       <div className={styles.App} >

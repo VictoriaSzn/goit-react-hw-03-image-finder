@@ -14,9 +14,7 @@ export default class Searchbar extends Component{
     handleSubmit = evt => {
         evt.preventDefault();
         if (this.state.value.trim() === '') {
-          // alert ('enter a word for search')
-           return toast.error('enter a word for search.')
-          //return toast.custom(<div>enter a word for search</div>);
+            return toast.error('enter a word for search.')
         }
         this.props.onSubmitProps(this.state.value);
         this.setState({ value: '' });
@@ -36,8 +34,7 @@ export default class Searchbar extends Component{
                          onChange={this.handleChange}
                      />
                       <button type="submit" className={styles.SearchForm_button}>
-                       {/* <span className={styles.SearchForm_button_label}>Search</span> */}
-                       <ImSearch style = {{marginRight: 8}}/>
+                        <ImSearch style = {{marginRight: 8}}/>
                      </button>
                 </form>
             </header>

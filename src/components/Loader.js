@@ -1,18 +1,25 @@
-import { ImSpinner } from "react-icons/im";
-//import ImageGalleryItem from "./ImageGalleryItem";
-//import pendingImage from './pending.jpg';
+import { Circles} from  'react-loader-spinner'
+
 import styles from './styles.module.css';
-// const styles = {
-    
-// };
 
 export default function Loader() {
   
     return (
-        <div style={styles.spinner}>
-            <ImSpinner size="32" className="icon-spin"/>
-            Loading...
-        </div>
-           
+        <>
+        <div className={styles.spinner}>
+            
+            <Circles
+                height="180"
+                width="180"
+                color="#4fa94d"
+                ariaLabel="circles-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />
+            
+            </div>
+            <h1 className={styles.loader_title}> Loading...</h1>
+      </>     
     );
 }
