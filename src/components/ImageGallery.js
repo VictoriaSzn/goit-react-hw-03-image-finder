@@ -24,7 +24,7 @@ export default class ImageGallery extends Component{
                 if (image.total === 0) {
                 return Promise.reject(new Error(`On request ${this.props.valueProps} nothing found!`),)
                 }
-                this.setState({ image:[...this.state.image, ...image.hits], status:'resolved' })
+                this.setState({ image:[...image.hits, ...this.state.image], status:'resolved' })
              })
              .catch(error => {this.setState({ error, status: 'rejected' })
             
@@ -33,7 +33,7 @@ export default class ImageGallery extends Component{
       
    }
    handleLoad = () => {
-      this.setState((prev) => ({ page: prev.page + 1 }));
+      this.setState((prev) => ({ page: prev.page + 1, image: [] }));
    }
    render() {
       const { image, error, status } = this.state;
