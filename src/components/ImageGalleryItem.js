@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import  Modal  from './Modal';
 import styles from './styles.module.css';
+import PropTypes from 'prop-types';
 
 export default class ImageGalleryItem extends Component{
   state = {
@@ -24,7 +25,6 @@ export default class ImageGalleryItem extends Component{
             className={styles.ImageGalleryItem_image}
             src={webformatURL}
             alt={tags}
-            //onClick={() =>onZoom(largeImageURL)}
             onClick={this.handleClickImg}
           />
          
@@ -33,13 +33,16 @@ export default class ImageGalleryItem extends Component{
         {this.state.isOpen &&(
           <Modal
               image={largeImageURL}
-              //onClick={this.closeModal}
-               onClose={this.toggleModal}
+              onClose={this.toggleModal}
               />
         )}
       </>
     );
   }
-}
+};
+ImageGalleryItem.propTypes = {
+  webformatURL: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired
+};
 
 
