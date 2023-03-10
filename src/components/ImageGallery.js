@@ -33,8 +33,9 @@ export default class ImageGallery extends Component{
       
    }
    handleLoad = () => {
-      this.setState((prev) => ({ page: prev.page + 1, image: [] }));
+      this.setState((prev) => ({ page: prev.page + 1}));
    }
+  
    render() {
       const { image, error, status } = this.state;
            
@@ -62,6 +63,7 @@ export default class ImageGallery extends Component{
                <Button onClick={this.handleLoad} />
             </>
          )
+        
       }
    }
 };
