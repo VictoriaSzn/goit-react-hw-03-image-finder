@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 export default class App extends Component {
   state = {
     textSearch: '',
-    image: []
+    //image: []
   }
   
   handleFormSubmit = textSearch => {
@@ -17,9 +17,9 @@ export default class App extends Component {
     
   }
   ////
-  newSerch = image => {
-    this.setState({ image });
-  }
+  //newSerch = image => {
+  //  this.setState({ image });
+  //}
   ////
   render() {
     return (
@@ -32,7 +32,8 @@ export default class App extends Component {
         />
         <Searchbar
           onSubmitProps={this.handleFormSubmit}
-          onNewSearch={this.newSerch} />
+        //onNewSearch={this.newSerch} 
+        />
         <ImageGallery valueProps={this.state.textSearch} />
       </div>
     );

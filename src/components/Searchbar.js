@@ -19,8 +19,9 @@ export default class Searchbar extends Component{
             return toast.error('your request is empty')
         }
         this.props.onSubmitProps(this.state.value);
-        this.props.onNewSearch(this.state.image);
-        this.setState({ value: '', image: [] });
+        //this.props.onNewSearch(this.state.image);
+        //this.setState({ value: '', image: [] });
+        this.setState({ value: '' });
     }
 
     render() {
