@@ -6,11 +6,10 @@ import PropTypes from 'prop-types';
 
 export default class Searchbar extends Component{
     state = {
-        value: '',
-        image: []
+        value: ''     
     }
     handleChange= evt => {
-        this.setState({ value: evt.target.value })
+        this.setState({ value: evt.target.value });
     }
 
     handleSubmit = evt => {
@@ -18,9 +17,7 @@ export default class Searchbar extends Component{
         if (this.state.value.trim() === '') {
             return toast.error('your request is empty')
         }
-        this.props.onSubmitProps(this.state.value);
-        //this.props.onNewSearch(this.state.image);
-        //this.setState({ value: '', image: [] });
+        this.props.onSubmitProps(this.state.value.trim());
         this.setState({ value: '' });
     }
 
